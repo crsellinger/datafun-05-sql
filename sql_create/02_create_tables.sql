@@ -1,10 +1,20 @@
+-- Start by deleting any tables if the exist already
+-- We want to be able to re-run this script as needed.
+-- DROP tables in reverse order of creation 
+-- DROP dependent tables (with foreign keys) first
+-- Makes the script idempotent (rerunnable) using the most current statements each time we run
+
+DROP TABLE IF EXISTS books;
+DROP TABLE IF EXISTS authors;
+
 -- Create the authors table 
 -- Note that the author table has no foreign keys, so it is a standalone table
 
 CREATE TABLE authors (
     author_id TEXT PRIMARY KEY,
-    first TEXT,
-    last TEXT,
+    first_name TEXT,
+    last_name TEXT,
+    year_born INTEGER
 );
 
 -- Create the books table
