@@ -6,6 +6,9 @@
 
 DROP TABLE IF EXISTS books;
 DROP TABLE IF EXISTS authors;
+DROP TABLE IF EXISTS books_sorted;      -- For db03 py script
+DROP TABLE IF EXISTS authors_grouped;   --For db03 py script
+DROP TABLE IF EXISTS joined_tables;   --For db03 py script
 
 -- Create the authors table 
 -- Note that the author table has no foreign keys, so it is a standalone table

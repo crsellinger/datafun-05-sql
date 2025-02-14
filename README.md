@@ -21,3 +21,11 @@ py -m venv .venv
 py -m pip install --upgrade pip setuptools wheel
 py -m pip install -r requirements.txt
 ```
+
+**Running**
+
+After activating virtual environment, use following command template to run.
+
+```shell
+py ./[script name]
+```

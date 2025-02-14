@@ -19,7 +19,8 @@ def create_database():
         print("Error creating the database:", e)
 
 def create_tables():
-    """Function to read and execute SQL statements to create tables"""
+    """Function to read and execute SQL statements to drop existing table and create new ones.
+    This will drop the books_sorted table if db03 was previously ran."""
     try:
         with sqlite3.connect(db_file) as conn:
             sql_file = pathlib.Path("sql_create", "02_create_tables.sql")
