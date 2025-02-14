@@ -43,8 +43,8 @@ def insert_data_from_csv():
         with sqlite3.connect(db_file) as conn:
             # use the pandas DataFrame to_sql() method to insert data
             # pass in the table name and the connection
-            authors_df.to_sql("authors", conn, if_exists="replace", index=False)
-            books_df.to_sql("books", conn, if_exists="replace", index=False)
+            authors_df.to_sql("authors", conn, if_exists="append", index=False)
+            books_df.to_sql("books", conn, if_exists="append", index=False)
             print("Data inserted successfully.")
     except (sqlite3.Error, pd.errors.EmptyDataError, FileNotFoundError) as e:
         print("Error inserting data:", e)

@@ -15,9 +15,8 @@ DROP TABLE IF EXISTS joined_tables;   --For db03 py script
 
 CREATE TABLE authors (
     author_id TEXT PRIMARY KEY,
-    first_name TEXT,
-    last_name TEXT,
-    year_born INTEGER
+    first TEXT,
+    last TEXT,
 );
 
 -- Create the books table
